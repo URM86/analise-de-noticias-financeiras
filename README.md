@@ -1,6 +1,7 @@
-# 📈 Monitor de Sentimento de Mercado — B3
+# Análise de Mercado de Ações
 
-Coleta notícias via **Google News RSS** e calcula score de sentimento
+Coleta notícias via **Google News RSS e alguns sites especificos como Bloomberg Línea Brasil, Infomoney,
+Brazil Journal e Neofeed**   e calcula score de sentimento
 para ações da B3 usando análise de linguagem natural em português.
 
 ---

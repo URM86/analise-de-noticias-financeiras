@@ -89,3 +89,65 @@
   → BART vence (82%) | ✗ divergem
 2026-05-23 11:21:50 | INFO     | src.storage | ✔ 7 artigo(s) salvos em 'data/sentimentos.csv'.
 2026-05-23 11:21:50 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
+2026-05-24 15:46:58 | DEBUG    | src.storage | 7 artigos já processados no histórico.
+2026-05-24 15:46:58 | INFO     | src.rss_fetcher | [BBDC4] ── Iniciando coleta multi-fonte ──
+2026-05-24 15:46:58 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=BBDC4&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-05-24 15:47:00 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'BBDC4' → 100 entradas
+2026-05-24 15:47:01 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=Bradesco&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-05-24 15:47:03 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'Bradesco' → 100 entradas
+2026-05-24 15:47:04 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=Banco+Bradesco&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-05-24 15:47:05 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'Banco Bradesco' → 100 entradas
+2026-05-24 15:47:07 | INFO     | src.rss_fetcher | [BBDC4] Google News: 4 artigo(s)
+2026-05-24 15:47:07 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-05-24 15:47:08 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-05-24 15:47:09 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-05-24 15:47:10 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] 10 entradas no feed — filtrando...
+2026-05-24 15:47:11 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-05-24 15:47:12 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] 10 entradas no feed — filtrando...
+2026-05-24 15:47:14 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-05-24 15:47:14 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] 10 entradas no feed — filtrando...
+2026-05-24 15:47:16 | INFO     | src.rss_fetcher | [BBDC4] Feeds extras: 0 artigo(s)
+2026-05-24 15:47:16 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-05-24 15:47:16 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-05-24 15:47:16 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-05-24 15:47:17 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-05-24 15:47:17 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Nenhum fato relevante no período.
+2026-05-24 15:47:17 | INFO     | src.rss_fetcher | [BBDC4] Total coletado: 4 item(ns) (GNews: 4 | Extras: 0 | CVM: 0)
+2026-05-24 15:47:17 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bradesco abre 225 vagas de emprego no Brasil com oportunidad...'
+2026-05-24 15:47:17 | DEBUG    | src.sentiment_analyzer | Tradutor PT→EN inicializado.
+2026-05-24 15:47:17 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-24 15:47:18 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Bradesco+abre+225+vagas+de+emprego+no+Brasil+com+oportunidades+em+tecnologia%2C+neg%C3%B3cios+e+seguran%C3%A7a+da+informa%C3%A7%C3%A3o.+Bradesco+abre+225+vagas+de+emprego+no+Brasil+com+oportunidades+em+tecnologia%2C+neg%C3%B3cios+e+seguran%C3%A7a+da+informa%C3%A7%C3%A3o%26nbsp%3B%26nbsp%3BJC+Concursos HTTP/1.1" 200 None
+2026-05-24 15:47:18 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bradesco opens 225 job vacancies in Brazil with opportunitie...'
+2026-05-24 15:47:18 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-05-24 15:47:26 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): huggingface.co:443
+2026-05-24 15:47:26 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /facebook/bart-large-mnli/resolve/main/config.json HTTP/1.1" 307 0
+2026-05-24 15:47:26 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/bart-large-mnli/d7645e127eaf1aefc7862fd59a17a5aa8558b8ce/config.json HTTP/1.1" 200 0
+2026-05-24 15:47:30 | INFO     | src.sentiment_analyzer | [BART] Modelo carregado.
+2026-05-24 15:47:32 | INFO     | src.sentiment_analyzer | [FinBERT] Carregando 'ProsusAI/finbert'... (~400MB, só na primeira vez)
+2026-05-24 15:47:32 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /ProsusAI/finbert/resolve/main/config.json HTTP/1.1" 307 0
+2026-05-24 15:47:32 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json HTTP/1.1" 200 0
+2026-05-24 15:47:32 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): huggingface.co:443
+2026-05-24 15:47:32 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /ProsusAI/finbert/resolve/main/model.safetensors HTTP/1.1" 404 0
+2026-05-24 15:47:33 | INFO     | src.sentiment_analyzer | [FinBERT] Modelo carregado.
+2026-05-24 15:47:33 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'Bradesco abre 225 vagas de emprego no Brasil '
+  BART:    positive   84%
+  FinBERT: neutral    65%
+  → BART vence (84%) | ✗ divergem
+2026-05-24 15:47:33 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bradesco oferece mais de 80 cursos gratuitos com certificado...'
+2026-05-24 15:47:33 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-24 15:47:34 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Bradesco+oferece+mais+de+80+cursos+gratuitos+com+certificado+online.+Bradesco+oferece+mais+de+80+cursos+gratuitos+com+certificado+online%26nbsp%3B%26nbsp%3BSerra+Notici%C3%A1rio HTTP/1.1" 200 None
+2026-05-24 15:47:35 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bradesco offers more than 80 free courses with online certif...'
+2026-05-24 15:47:35 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'Bradesco oferece mais de 80 cursos gratuitos '
+  BART:    positive   78%
+  FinBERT: neutral    92%
+  → FinBERT vence (92%) | ✗ divergem
+2026-05-24 15:47:35 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bradesco Seguros divulga ações durante Maio Amarelo. Bradesc...'
+2026-05-24 15:47:35 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-24 15:47:35 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Bradesco+Seguros+divulga+a%C3%A7%C3%B5es+durante+Maio+Amarelo.+Bradesco+Seguros+divulga+a%C3%A7%C3%B5es+durante+Maio+Amarelo%26nbsp%3B%26nbsp%3BGrandes+Nomes+da+Propaganda HTTP/1.1" 200 None
+2026-05-24 15:47:36 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bradesco Seguros publishes actions during Yellow May. Brades...'
+2026-05-24 15:47:36 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'Bradesco Seguros divulga ações durante Maio A'
+  BART:    positive   47%
+  FinBERT: neutral    61%
+  → FinBERT vence (61%) | ✗ divergem
+2026-05-24 15:47:36 | INFO     | src.storage | ✔ 3 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-05-24 15:47:36 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
