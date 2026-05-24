@@ -1,12 +1,16 @@
 # Análise de Mercado de Ações
 
-Coleta notícias via **Google News RSS e alguns sites especificos como Bloomberg Línea Brasil, Infomoney,
-Brazil Journal e Neofeed**   e calcula score de sentimento
-para ações da B3 usando análise de linguagem natural em português.
+Coleta notícias via Google News RSS e fontes, como Bloomberg Línea Brasil, InfoMoney, Brazil Journal e NeoFeed, para calcular _scores_ de sentimento aplicados à análise de ações da B3 utilizando os modelos FinBERT e BART disponibilizados pela plataforma Hugging Face.  
+
+A proposta do projeto é inspirada no B3Analysis <https://github.com/guhcostan/b3analysis>, enquanto a estrutura inicial do código foi desenvolvida com auxílio do Claude Code. 
+
+---
+> **Atenção**  
+> Este projeto possui finalidade educacional e de estudo pessoal. Os relatórios são gerados por agentes de IA e não constituem recomendação de investimento, consultoria financeira ou análise profissional. Investimentos em renda variável envolvem risco de perda parcial ou total do capital investido. Antes de investir, consulte um profissional autorizado e registrado na Comissão de Valores Mobiliários (CVM).
 
 ---
 
-## 🚀 Instalação Rápida (VSCode)
+## 🚀 Instalação Rápida
 
 ### 1. Pré-requisitos
 - Python 3.10+
