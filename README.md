@@ -5,7 +5,6 @@ A proposta do projeto é inspirada no [B3Analysis](https://github.com/guhcostan/
 
 > **Atenção**
 > Este projeto possui finalidade educacional e de estudo pessoal. Os relatórios são gerados por modelos de linguagem e não constituem recomendação de investimento, consultoria financeira ou análise profissional. Investimentos em renda variável envolvem risco de perda parcial ou total do capital investido. Antes de investir, consulte um profissional autorizado e registrado na Comissão de Valores Mobiliários (CVM).
-
 ---
 
 ## O que este sistema faz
