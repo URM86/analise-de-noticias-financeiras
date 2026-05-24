@@ -1,0 +1,91 @@
+2026-05-23 11:21:20 | INFO     | src.rss_fetcher | [BBDC4] ── Iniciando coleta multi-fonte ──
+2026-05-23 11:21:20 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=BBDC4&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-05-23 11:21:21 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'BBDC4' → 100 entradas
+2026-05-23 11:21:23 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=Bradesco&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-05-23 11:21:24 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'Bradesco' → 100 entradas
+2026-05-23 11:21:25 | INFO     | src.rss_fetcher | [BBDC4] Google News: 7 artigo(s)
+2026-05-23 11:21:25 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-05-23 11:21:26 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-05-23 11:21:27 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-05-23 11:21:28 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] 10 entradas no feed — filtrando...
+2026-05-23 11:21:29 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-05-23 11:21:30 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] 10 entradas no feed — filtrando...
+2026-05-23 11:21:32 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-05-23 11:21:32 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] 10 entradas no feed — filtrando...
+2026-05-23 11:21:34 | INFO     | src.rss_fetcher | [BBDC4] Feeds extras: 0 artigo(s)
+2026-05-23 11:21:34 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-05-23 11:21:34 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-05-23 11:21:34 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-05-23 11:21:35 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-05-23 11:21:35 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Nenhum fato relevante no período.
+2026-05-23 11:21:35 | INFO     | src.rss_fetcher | [BBDC4] Total coletado: 7 item(ns) (GNews: 7 | Extras: 0 | CVM: 0)
+2026-05-23 11:21:35 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'BBDC4 - Banco Bradesco - Resultados, Dividendos, Cotação e I...'
+2026-05-23 11:21:35 | DEBUG    | src.sentiment_analyzer | Tradutor PT→EN inicializado.
+2026-05-23 11:21:35 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-23 11:21:35 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=BBDC4+-+Banco+Bradesco+-+Resultados%2C+Dividendos%2C+Cota%C3%A7%C3%A3o+e+Indicadores.+BBDC4+-+Banco+Bradesco+-+Resultados%2C+Dividendos%2C+Cota%C3%A7%C3%A3o+e+Indicadores%26nbsp%3B%26nbsp%3BInvestidor10 HTTP/1.1" 200 None
+2026-05-23 11:21:35 | DEBUG    | src.sentiment_analyzer | Traduzido:  'BBDC4 - Banco Bradesco - Results, Dividends, Prices and Indi...'
+2026-05-23 11:21:35 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-05-23 11:21:39 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): huggingface.co:443
+2026-05-23 11:21:39 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /facebook/bart-large-mnli/resolve/main/config.json HTTP/1.1" 307 0
+2026-05-23 11:21:39 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/bart-large-mnli/d7645e127eaf1aefc7862fd59a17a5aa8558b8ce/config.json HTTP/1.1" 200 0
+2026-05-23 11:21:41 | INFO     | src.sentiment_analyzer | [BART] Modelo carregado.
+2026-05-23 11:21:42 | INFO     | src.sentiment_analyzer | [FinBERT] Carregando 'ProsusAI/finbert'... (~400MB, só na primeira vez)
+2026-05-23 11:21:42 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /ProsusAI/finbert/resolve/main/config.json HTTP/1.1" 307 0
+2026-05-23 11:21:42 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json HTTP/1.1" 200 0
+2026-05-23 11:21:42 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): huggingface.co:443
+2026-05-23 11:21:43 | DEBUG    | urllib3.connectionpool | https://huggingface.co:443 "HEAD /ProsusAI/finbert/resolve/main/model.safetensors HTTP/1.1" 404 0
+2026-05-23 11:21:43 | INFO     | src.sentiment_analyzer | [FinBERT] Modelo carregado.
+2026-05-23 11:21:43 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'BBDC4 - Banco Bradesco - Resultados, Dividend'
+  BART:    positive   69%
+  FinBERT: neutral    95%
+  → FinBERT vence (95%) | ✗ divergem
+2026-05-23 11:21:43 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'BBAS3, BBDC4 e ITUB4 perdem força e bancos entram em zona de...'
+2026-05-23 11:21:43 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-23 11:21:44 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=BBAS3%2C+BBDC4+e+ITUB4+perdem+for%C3%A7a+e+bancos+entram+em+zona+decisiva+na+Bolsa.+BBAS3%2C+BBDC4+e+ITUB4+perdem+for%C3%A7a+e+bancos+entram+em+zona+decisiva+na+Bolsa%26nbsp%3B%26nbsp%3BGuia+do+Investidor HTTP/1.1" 200 None
+2026-05-23 11:21:44 | DEBUG    | src.sentiment_analyzer | Traduzido:  'BBAS3, BBDC4 and ITUB4 lose strength and banks enter a decis...'
+2026-05-23 11:21:44 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'BBAS3, BBDC4 e ITUB4 perdem força e bancos en'
+  BART:    negative   94%
+  FinBERT: negative   88%
+  → BART vence (94%) | ✔ concordam
+2026-05-23 11:21:44 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bancos vão cair mais? BBAS3, BBDC4 e ITUB4 acendem alerta no...'
+2026-05-23 11:21:44 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-23 11:21:45 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Bancos+v%C3%A3o+cair+mais%3F+BBAS3%2C+BBDC4+e+ITUB4+acendem+alerta+no+gr%C3%A1fico.+Bancos+v%C3%A3o+cair+mais%3F+BBAS3%2C+BBDC4+e+ITUB4+acendem+alerta+no+gr%C3%A1fico%26nbsp%3B%26nbsp%3BInfoMoney HTTP/1.1" 200 None
+2026-05-23 11:21:45 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Will banks fall further? BBAS3, BBDC4 and ITUB4 light up an ...'
+2026-05-23 11:21:46 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'Bancos vão cair mais? BBAS3, BBDC4 e ITUB4 ac'
+  BART:    negative   66%
+  FinBERT: neutral    75%
+  → FinBERT vence (75%) | ✗ divergem
+2026-05-23 11:21:46 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bradesco (BBDC4) entra na briga pelos ultrarricos com financ...'
+2026-05-23 11:21:46 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-23 11:21:46 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Bradesco+%28BBDC4%29+entra+na+briga+pelos+ultrarricos+com+financiamento+de+jatos+executivos.+Bradesco+%28BBDC4%29+entra+na+briga+pelos+ultrarricos+com+financiamento+de+jatos+executivos%26nbsp%3B%26nbsp%3BInvestidor10 HTTP/1.1" 200 None
+2026-05-23 11:21:46 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bradesco (BBDC4) enters the fight for the ultra-rich with fi...'
+2026-05-23 11:21:47 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'Bradesco (BBDC4) entra na briga pelos ultrarr'
+  BART:    positive   90%
+  FinBERT: neutral    89%
+  → BART vence (90%) | ✗ divergem
+2026-05-23 11:21:47 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bradesco (BBDC4), Copel (CPLE3), Kepler Weber (KEPL3) e outr...'
+2026-05-23 11:21:47 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-23 11:21:47 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Bradesco+%28BBDC4%29%2C+Copel+%28CPLE3%29%2C+Kepler+Weber+%28KEPL3%29+e+outros+destaques+desta+sexta-feira+%2822%29.+Bradesco+%28BBDC4%29%2C+Copel+%28CPLE3%29%2C+Kepler+Weber+%28KEPL3%29+e+outros+destaques+desta+sexta-feira+%2822%29%26nbsp%3B%26nbsp%3BMoney+Times HTTP/1.1" 200 None
+2026-05-23 11:21:47 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bradesco (BBDC4), Copel (CPLE3), Kepler Weber (KEPL3) and ot...'
+2026-05-23 11:21:48 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'Bradesco (BBDC4), Copel (CPLE3), Kepler Weber'
+  BART:    positive   88%
+  FinBERT: neutral    94%
+  → FinBERT vence (94%) | ✗ divergem
+2026-05-23 11:21:48 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'BBDC4, CPLE3 e KEPL3: destaques desta sexta. BBDC4, CPLE3 e ...'
+2026-05-23 11:21:48 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-23 11:21:48 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=BBDC4%2C+CPLE3+e+KEPL3%3A+destaques+desta+sexta.+BBDC4%2C+CPLE3+e+KEPL3%3A+destaques+desta+sexta%26nbsp%3B%26nbsp%3BSpaceMoney HTTP/1.1" 200 None
+2026-05-23 11:21:48 | DEBUG    | src.sentiment_analyzer | Traduzido:  'BBDC4, CPLE3 and KEPL3: highlights from this Friday. BBDC4, ...'
+2026-05-23 11:21:49 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'BBDC4, CPLE3 e KEPL3: destaques desta sexta'
+  BART:    positive   81%
+  FinBERT: neutral    92%
+  → FinBERT vence (92%) | ✗ divergem
+2026-05-23 11:21:49 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Com seguro de vida ‘bombando’ e Brasil envelhecendo, Bradesc...'
+2026-05-23 11:21:49 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-05-23 11:21:49 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Com+seguro+de+vida+%E2%80%98bombando%E2%80%99+e+Brasil+envelhecendo%2C+Bradesco+faz+mudan%C3%A7a+para+surfar+%E2%80%98economia+prateada%E2%80%99.+Com+seguro+de+vida+%E2%80%98bombando%E2%80%99+e+Brasil+envelhecendo%2C+Bradesco+faz+mudan%C3%A7a+para+surfar+%E2%80%98economia+prateada%E2%80%99%26nbsp%3B%26nbsp%3BO+GLOBO HTTP/1.1" 200 None
+2026-05-23 11:21:49 | DEBUG    | src.sentiment_analyzer | Traduzido:  'With life insurance ‘booming’ and Brazil aging, Bradesco mak...'
+2026-05-23 11:21:50 | DEBUG    | src.sentiment_analyzer | [BBDC4] 'Com seguro de vida ‘bombando’ e Brasil envelh'
+  BART:    positive   82%
+  FinBERT: neutral    80%
+  → BART vence (82%) | ✗ divergem
+2026-05-23 11:21:50 | INFO     | src.storage | ✔ 7 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-05-23 11:21:50 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.

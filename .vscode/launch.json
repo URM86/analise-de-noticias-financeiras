@@ -1,0 +1,75 @@
+{
+    // ============================================================
+    // .vscode/launch.json
+    // Configurações de debug para o VSCode.
+    // Permite rodar/debugar o projeto sem terminal externo.
+    // ============================================================
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // ── Execução padrão: todos os tickers ────────────────
+            "name": "▶ Executar (todos os tickers)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            // ── Debug com ticker específico ──────────────────────
+            "name": "🔍 Debug – BBDC4 apenas",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": ["--tickers", "BBDC4", "--log-nivel", "DEBUG"],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            // ── Modo daemon (loop contínuo) ──────────────────────
+            "name": "🔄 Daemon Mode (60 min)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": ["--daemon", "--intervalo", "60"],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            // ── Sem tradução (mais rápido, menos preciso) ────────
+            "name": "⚡ Sem tradução (rápido)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": ["--sem-traducao"],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            // ── Subset de tickers para testes ────────────────────
+            "name": "🧪 Teste – ITSA4 CSAN3 CMIG4",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": ["--tickers", "ITSA4", "CSAN3", "CMIG4"],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        }
+    ]
+}

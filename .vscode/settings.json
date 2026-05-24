@@ -1,0 +1,30 @@
+{
+    // ============================================================
+    // .vscode/settings.json
+    // Configurações específicas do projeto para o VSCode
+    // ============================================================
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python",
+    "python.terminal.activateEnvironment": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        ".venv": false
+    },
+    "editor.rulers": [88],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    }
+}
