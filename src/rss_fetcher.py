@@ -7,16 +7,13 @@ Coleta de notícias de MÚLTIPLAS fontes:
   FONTE 2 — Feeds RSS extras (Bloomberg Línea, Infomoney,
              Brazil Journal, Neofeed, etc.) — varridos
              inteiros e filtrados por termos do ticker
-  FONTE 3 — API da CVM (fatos relevantes oficiais,
-             filtrados por CNPJ da empresa)
 
 Fluxo por ticker:
   1. Busca no Google News RSS (por cada termo de busca)
   2. Varre cada feed RSS extra ativo e filtra por termos
-  3. Consulta fatos relevantes na CVM via API pública
-  4. Unifica tudo, deduplica por hash MD5 da URL
-  5. Filtra por idade máxima (IDADE_MAXIMA_HORAS)
-  6. Retorna lista com no máximo MAX_ARTIGOS_POR_TICKER itens
+  3. Unifica tudo, deduplica por hash MD5 da URL
+  4. Filtra por idade máxima (IDADE_MAXIMA_HORAS)
+  5. Retorna lista com no máximo MAX_ARTIGOS_POR_TICKER itens
 
 COMO ADICIONAR NOVO SITE RSS:
   → Edite config/settings.py → FEEDS_RSS_EXTRAS
@@ -43,9 +40,6 @@ from config.settings import (
     MAX_ARTIGOS_POR_TICKER,
     IDADE_MAXIMA_HORAS,
     ACOES,
-    CVM_ATIVO,
-    CVM_CNPJ,
-    MAX_FATOS_CVM,
 )
 
 logger = logging.getLogger(__name__)
@@ -286,153 +280,13 @@ def _buscar_todos_feeds_extras(ticker: str, termos: list[str],
     return todos
 
 
-# ── FONTE 3: API CVM — Fatos Relevantes ──────────────────────────────────────
-
-def _buscar_fatos_cvm(ticker: str, vistos: set) -> list[dict]:
-    """
-    Busca fatos relevantes na API pública da CVM usando o CNPJ da empresa.
-
-    A CVM disponibiliza um CSV de documentos por empresa no endpoint:
-    https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFIN/DADOS/
-
-    Usamos o endpoint de fatos relevantes do sistema ENET (ITR/FR),
-    filtrando por CNPJ e data.
-
-    Retorna artigos no mesmo formato padrão do projeto, com
-    origem="cvm" para identificação nos relatórios.
-    """
-    if not CVM_ATIVO:
-        return []
-
-    cnpj = CVM_CNPJ.get(ticker)
-    if not cnpj:
-        logger.debug(f"[{ticker}][CVM] CNPJ não configurado — pulando.")
-        return []
-
-    import urllib.request
-    import json
-    from urllib.parse import urlencode
-
-    coletados = []
-
-    # ── Endpoint da API de dados abertos da CVM ───────────────────────────────
-    # A CVM disponibiliza arquivos CSV com metadados de documentos por ano.
-    # Usamos o endpoint de busca de documentos recentes via parâmetros de URL.
-    #
-    # URL de fatos relevantes do ENET (sistema público da CVM):
-    # https://www.rad.cvm.gov.br/ENET/frmConsultaExternaCVM.aspx
-    # mas para API programática usamos o endpoint de dados abertos:
-    base_url = "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/"
-
-    ano_atual = datetime.now().year
-    anos = [ano_atual, ano_atual - 1]   # ano atual + anterior (caso seja início do ano)
-
-    limite = MAX_FATOS_CVM
-    data_corte = datetime.now(tz=timezone.utc) - timedelta(hours=IDADE_MAXIMA_HORAS)
-
-    for ano in anos:
-        if len(coletados) >= limite:
-            break
-
-        url_csv = f"{base_url}fr_cia_aberta_{ano}.csv"
-        logger.debug(f"[{ticker}][CVM] Consultando {url_csv}")
-
-        try:
-            req = urllib.request.Request(
-                url_csv,
-                headers={"User-Agent": HEADERS["User-Agent"]},
-            )
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                conteudo = resp.read().decode("latin-1")
-        except Exception as e:
-            logger.warning(f"[{ticker}][CVM] Erro ao baixar CSV {ano}: {e}")
-            continue
-
-        # Processa o CSV linha por linha (sem pandas para evitar dependência extra)
-        linhas = conteudo.splitlines()
-        if not linhas:
-            continue
-
-        # Cabeçalho do CSV da CVM:
-        # CNPJ_CIA;DENOM_CIA;DT_REFER;DT_RECEB;ID_DOC;LINK_DOC;...
-        cabecalho = [c.strip() for c in linhas[0].split(";")]
-
-        try:
-            idx_cnpj   = cabecalho.index("CNPJ_CIA")
-            idx_dt     = cabecalho.index("DT_RECEB")
-            idx_link   = cabecalho.index("LINK_DOC") if "LINK_DOC" in cabecalho else -1
-            idx_assunto = cabecalho.index("ASSUNTO") if "ASSUNTO" in cabecalho else -1
-            idx_denom  = cabecalho.index("DENOM_CIA")
-        except ValueError as e:
-            logger.warning(f"[{ticker}][CVM] Coluna não encontrada no CSV: {e}")
-            continue
-
-        # Normaliza CNPJ: remove pontuação para comparação
-        cnpj_limpo = re.sub(r"\D", "", cnpj)
-
-        for linha in linhas[1:]:
-            if len(coletados) >= limite:
-                break
-
-            campos = [c.strip() for c in linha.split(";")]
-            if len(campos) <= max(idx_cnpj, idx_dt):
-                continue
-
-            # Filtra pelo CNPJ da empresa
-            cnpj_linha = re.sub(r"\D", "", campos[idx_cnpj])
-            if cnpj_linha != cnpj_limpo:
-                continue
-
-            # Filtra pela data
-            try:
-                dt_str = campos[idx_dt][:10]   # "YYYY-MM-DD"
-                dt_pub = datetime.strptime(dt_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-                if dt_pub < data_corte:
-                    continue
-            except Exception:
-                pass   # sem data → aceita
-
-            # Monta URL do documento
-            link = campos[idx_link].strip() if idx_link >= 0 and idx_link < len(campos) else ""
-            if not link:
-                link = f"https://www.rad.cvm.gov.br/ENET/frmConsultaExternaCVM.aspx?CNPJ={cnpj}"
-
-            art_id = _gera_id(link)
-            if art_id in vistos:
-                continue
-
-            assunto = campos[idx_assunto].strip() if idx_assunto >= 0 and idx_assunto < len(campos) else "Fato Relevante"
-            empresa = campos[idx_denom].strip() if idx_denom < len(campos) else ticker
-
-            coletados.append({
-                "ticker":      ticker,
-                "id":          art_id,
-                "titulo":      f"[CVM] {empresa} — {assunto}",
-                "descricao":   f"Fato relevante publicado na CVM em {campos[idx_dt][:10]}. Empresa: {empresa}.",
-                "url":         link,
-                "fonte":       "CVM — Dados Abertos",
-                "data_pub":    campos[idx_dt][:10],
-                "termo_busca": cnpj,
-                "origem":      "cvm",
-            })
-            vistos.add(art_id)
-
-    if coletados:
-        logger.info(f"[{ticker}][CVM] {len(coletados)} fato(s) relevante(s) encontrado(s).")
-    else:
-        logger.debug(f"[{ticker}][CVM] Nenhum fato relevante no período.")
-
-    return coletados
-
-
 # ── Orquestrador principal ────────────────────────────────────────────────────
 
 def buscar_artigos_ticker(ticker: str, delay_segundos: float = 1.5) -> list[dict]:
     """
-    Coleta artigos de TODAS as fontes para um ticker:
+    Coleta artigos de todas as fontes RSS para um ticker:
       1. Google News RSS
       2. Feeds RSS extras (Bloomberg Línea, Infomoney, Brazil Journal, Neofeed...)
-      3. Fatos relevantes da CVM
 
     Todos os artigos passam pelo mesmo filtro de idade e deduplicação.
 
@@ -467,6 +321,7 @@ def buscar_artigos_ticker(ticker: str, delay_segundos: float = 1.5) -> list[dict
 
     # ── 2. Feeds extras ───────────────────────────────────────────────────────
     limite_extras = MAX_ARTIGOS_POR_TICKER - len(todos)
+    artigos_extras: list[dict] = []
     if limite_extras > 0:
         artigos_extras = _buscar_todos_feeds_extras(
             ticker, termos, vistos, limite_extras, delay_segundos
@@ -474,15 +329,9 @@ def buscar_artigos_ticker(ticker: str, delay_segundos: float = 1.5) -> list[dict
         todos.extend(artigos_extras)
         logger.info(f"[{ticker}] Feeds extras: {len(artigos_extras)} artigo(s)")
 
-    # ── 3. CVM ────────────────────────────────────────────────────────────────
-    fatos_cvm = _buscar_fatos_cvm(ticker, vistos)
-    todos.extend(fatos_cvm)   # fatos CVM não contam no limite de artigos RSS
-
     logger.info(
         f"[{ticker}] Total coletado: {len(todos)} item(ns) "
-        f"(GNews: {len(artigos_gnews)} | "
-        f"Extras: {len(artigos_extras) if limite_extras > 0 else 0} | "
-        f"CVM: {len(fatos_cvm)})"
+        f"(GNews: {len(artigos_gnews)} | Extras: {len(artigos_extras)})"
     )
     return todos
 

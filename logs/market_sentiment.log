@@ -151,3 +151,699 @@
   → FinBERT vence (61%) | ✗ divergem
 2026-05-24 15:47:36 | INFO     | src.storage | ✔ 3 artigo(s) salvos em 'data/sentimentos.csv'.
 2026-05-24 15:47:36 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
+2026-06-19 18:37:31 | DEBUG    | src.storage | 10 artigos já processados no histórico.
+2026-06-19 18:37:31 | INFO     | src.rss_fetcher | [BBDC4] ── Iniciando coleta multi-fonte ──
+2026-06-19 18:37:31 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=BBDC4&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:37:32 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'BBDC4' → 100 entradas
+2026-06-19 18:37:33 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=Bradesco&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:37:34 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'Bradesco' → 102 entradas
+2026-06-19 18:37:35 | INFO     | src.rss_fetcher | [BBDC4] Google News: 7 artigo(s)
+2026-06-19 18:37:35 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 18:37:36 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 18:37:37 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 18:37:37 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 18:37:39 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 18:37:39 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 18:37:39 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] ✔ 'JHSF virou ‘play’ de renda (e cada vez menos incor'
+2026-06-19 18:37:39 | INFO     | src.rss_fetcher | [BBDC4][Brazil Journal] 1 artigo(s) relevantes encontrados.
+2026-06-19 18:37:41 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 18:37:41 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 18:37:42 | INFO     | src.rss_fetcher | [BBDC4] Feeds extras: 1 artigo(s)
+2026-06-19 18:37:42 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 18:37:43 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 18:37:43 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 18:37:43 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 18:37:43 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Nenhum fato relevante no período.
+2026-06-19 18:37:43 | INFO     | src.rss_fetcher | [BBDC4] Total coletado: 8 item(ns) (GNews: 7 | Extras: 1 | CVM: 0)
+2026-06-19 18:38:40 | DEBUG    | src.storage | 10 artigos já processados no histórico.
+2026-06-19 18:38:40 | INFO     | src.rss_fetcher | [BBDC4] ── Iniciando coleta multi-fonte ──
+2026-06-19 18:38:40 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=BBDC4&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:38:40 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'BBDC4' → 100 entradas
+2026-06-19 18:38:42 | DEBUG    | src.rss_fetcher | [BBDC4][GNews] https://news.google.com/rss/search?q=Bradesco&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:38:42 | INFO     | src.rss_fetcher | [BBDC4][GNews] 'Bradesco' → 102 entradas
+2026-06-19 18:38:43 | INFO     | src.rss_fetcher | [BBDC4] Google News: 7 artigo(s)
+2026-06-19 18:38:43 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 18:38:44 | DEBUG    | src.rss_fetcher | [BBDC4][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 18:38:45 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 18:38:46 | DEBUG    | src.rss_fetcher | [BBDC4][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 18:38:47 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 18:38:48 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 18:38:48 | DEBUG    | src.rss_fetcher | [BBDC4][Brazil Journal] ✔ 'JHSF virou ‘play’ de renda (e cada vez menos incor'
+2026-06-19 18:38:48 | INFO     | src.rss_fetcher | [BBDC4][Brazil Journal] 1 artigo(s) relevantes encontrados.
+2026-06-19 18:38:50 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 18:38:50 | DEBUG    | src.rss_fetcher | [BBDC4][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 18:38:52 | INFO     | src.rss_fetcher | [BBDC4] Feeds extras: 1 artigo(s)
+2026-06-19 18:38:52 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 18:38:52 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 18:38:52 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 18:38:52 | WARNING  | src.rss_fetcher | [BBDC4][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 18:38:52 | DEBUG    | src.rss_fetcher | [BBDC4][CVM] Nenhum fato relevante no período.
+2026-06-19 18:38:52 | INFO     | src.rss_fetcher | [BBDC4] Total coletado: 8 item(ns) (GNews: 7 | Extras: 1 | CVM: 0)
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'ATENÇÃO, AÇÕES PARA NÃO COMPRAR! BBDC4 - FLRY3 - VALE3 - ABE...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'ATENÇÃO, AÇÕES PARA NÃO COMPRAR! BBDC4 - FLRY3 - VALE3 - ABE...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Justiça impede Bradesco de fechar única agência bancária em ...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Justiça impede Bradesco de fechar única agência bancária em ...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bradesco BBI vê ponto de entrada na B3 após correção e elege...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bradesco BBI vê ponto de entrada na B3 após correção e elege...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'JHSF virou ‘play’ de renda (e cada vez menos incorporadora),...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'JHSF virou ‘play’ de renda (e cada vez menos incorporadora),...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'TST reverte decisão e nega adicional de periculosidade a ban...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'TST reverte decisão e nega adicional de periculosidade a ban...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bradesco faz ponte entre startups e empresas. Bradesco faz p...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bradesco faz ponte entre startups e empresas. Bradesco faz p...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: '5 ações que podem ser impactadas pelo programa Move Brasil n...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  '5 ações que podem ser impactadas pelo programa Move Brasil n...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'JHSF virou ‘play’ de renda (e cada vez menos incorporadora),...'
+2026-06-19 18:38:53 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:38:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'JHSF virou ‘play’ de renda (e cada vez menos incorporadora),...'
+2026-06-19 18:38:53 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:38:53 | ERROR    | src.sentiment_analyzer | [BBDC4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:38:53 | INFO     | src.storage | ✔ 8 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-06-19 18:38:53 | INFO     | src.rss_fetcher | [ITSA4] ── Iniciando coleta multi-fonte ──
+2026-06-19 18:38:53 | DEBUG    | src.rss_fetcher | [ITSA4][GNews] https://news.google.com/rss/search?q=ITSA4&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:38:54 | INFO     | src.rss_fetcher | [ITSA4][GNews] 'ITSA4' → 100 entradas
+2026-06-19 18:38:55 | DEBUG    | src.rss_fetcher | [ITSA4][GNews] https://news.google.com/rss/search?q=Ita%C3%BAsa&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:38:56 | INFO     | src.rss_fetcher | [ITSA4][GNews] 'Itaúsa' → 100 entradas
+2026-06-19 18:38:58 | DEBUG    | src.rss_fetcher | [ITSA4][GNews] https://news.google.com/rss/search?q=Itausa&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:38:59 | INFO     | src.rss_fetcher | [ITSA4][GNews] 'Itausa' → 100 entradas
+2026-06-19 18:39:01 | INFO     | src.rss_fetcher | [ITSA4] Google News: 3 artigo(s)
+2026-06-19 18:39:01 | DEBUG    | src.rss_fetcher | [ITSA4][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 18:39:01 | DEBUG    | src.rss_fetcher | [ITSA4][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 18:39:02 | DEBUG    | src.rss_fetcher | [ITSA4][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 18:39:03 | DEBUG    | src.rss_fetcher | [ITSA4][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 18:39:04 | DEBUG    | src.rss_fetcher | [ITSA4][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 18:39:05 | DEBUG    | src.rss_fetcher | [ITSA4][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 18:39:06 | DEBUG    | src.rss_fetcher | [ITSA4][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 18:39:07 | DEBUG    | src.rss_fetcher | [ITSA4][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 18:39:08 | INFO     | src.rss_fetcher | [ITSA4] Feeds extras: 0 artigo(s)
+2026-06-19 18:39:08 | DEBUG    | src.rss_fetcher | [ITSA4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 18:39:08 | WARNING  | src.rss_fetcher | [ITSA4][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 18:39:08 | DEBUG    | src.rss_fetcher | [ITSA4][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 18:39:09 | WARNING  | src.rss_fetcher | [ITSA4][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 18:39:09 | DEBUG    | src.rss_fetcher | [ITSA4][CVM] Nenhum fato relevante no período.
+2026-06-19 18:39:09 | INFO     | src.rss_fetcher | [ITSA4] Total coletado: 3 item(ns) (GNews: 3 | Extras: 0 | CVM: 0)
+2026-06-19 18:39:09 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Itaúsa (ITSA4) entra pela 1ª vez em ranking de ações mais ne...'
+2026-06-19 18:39:09 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:09 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Itaúsa (ITSA4) entra pela 1ª vez em ranking de ações mais ne...'
+2026-06-19 18:39:09 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:09 | ERROR    | src.sentiment_analyzer | [ITSA4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:09 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Itaúsa (ITSA4) aprova distribuição de JCP de R$ 1,54 bilhão;...'
+2026-06-19 18:39:09 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:09 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Itaúsa (ITSA4) aprova distribuição de JCP de R$ 1,54 bilhão;...'
+2026-06-19 18:39:09 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:09 | ERROR    | src.sentiment_analyzer | [ITSA4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:09 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'ITSA4 anuncia JCP bilionário e desconto chama atenção. ITSA4...'
+2026-06-19 18:39:09 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:09 | DEBUG    | src.sentiment_analyzer | Traduzido:  'ITSA4 anuncia JCP bilionário e desconto chama atenção. ITSA4...'
+2026-06-19 18:39:09 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:09 | ERROR    | src.sentiment_analyzer | [ITSA4] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:09 | INFO     | src.storage | ✔ 3 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-06-19 18:39:09 | INFO     | src.rss_fetcher | [CSAN3] ── Iniciando coleta multi-fonte ──
+2026-06-19 18:39:09 | DEBUG    | src.rss_fetcher | [CSAN3][GNews] https://news.google.com/rss/search?q=CSAN3&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:39:10 | INFO     | src.rss_fetcher | [CSAN3][GNews] 'CSAN3' → 92 entradas
+2026-06-19 18:39:11 | INFO     | src.rss_fetcher | [CSAN3] Google News: 7 artigo(s)
+2026-06-19 18:39:11 | DEBUG    | src.rss_fetcher | [CSAN3][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 18:39:11 | DEBUG    | src.rss_fetcher | [CSAN3][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 18:39:13 | DEBUG    | src.rss_fetcher | [CSAN3][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 18:39:13 | DEBUG    | src.rss_fetcher | [CSAN3][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 18:39:15 | DEBUG    | src.rss_fetcher | [CSAN3][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 18:39:16 | DEBUG    | src.rss_fetcher | [CSAN3][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 18:39:17 | DEBUG    | src.rss_fetcher | [CSAN3][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 18:39:18 | DEBUG    | src.rss_fetcher | [CSAN3][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 18:39:19 | INFO     | src.rss_fetcher | [CSAN3] Feeds extras: 0 artigo(s)
+2026-06-19 18:39:19 | DEBUG    | src.rss_fetcher | [CSAN3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 18:39:19 | WARNING  | src.rss_fetcher | [CSAN3][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 18:39:19 | DEBUG    | src.rss_fetcher | [CSAN3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 18:39:20 | WARNING  | src.rss_fetcher | [CSAN3][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 18:39:20 | DEBUG    | src.rss_fetcher | [CSAN3][CVM] Nenhum fato relevante no período.
+2026-06-19 18:39:20 | INFO     | src.rss_fetcher | [CSAN3] Total coletado: 7 item(ns) (GNews: 7 | Extras: 0 | CVM: 0)
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Ainda dá tempo de ver Neymar jogar e de investir na Cosan (C...'
+2026-06-19 18:39:20 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Ainda dá tempo de ver Neymar jogar e de investir na Cosan (C...'
+2026-06-19 18:39:20 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:20 | ERROR    | src.sentiment_analyzer | [CSAN3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Cosan (CSAN3): prejuízo diminui e holding avança na desalava...'
+2026-06-19 18:39:20 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Cosan (CSAN3): prejuízo diminui e holding avança na desalava...'
+2026-06-19 18:39:20 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:20 | ERROR    | src.sentiment_analyzer | [CSAN3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Mercado já bateu demais na Cosan (CSAN3), diz BBI. Mercado j...'
+2026-06-19 18:39:20 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Mercado já bateu demais na Cosan (CSAN3), diz BBI. Mercado j...'
+2026-06-19 18:39:20 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:20 | ERROR    | src.sentiment_analyzer | [CSAN3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Cosan avança na desalavancagem, recebe reforço de bancos e a...'
+2026-06-19 18:39:20 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Cosan avança na desalavancagem, recebe reforço de bancos e a...'
+2026-06-19 18:39:20 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:20 | ERROR    | src.sentiment_analyzer | [CSAN3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Messi, Cristiano Ronaldo, Neymar e... Cosan (CSAN3): como li...'
+2026-06-19 18:39:20 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Messi, Cristiano Ronaldo, Neymar e... Cosan (CSAN3): como li...'
+2026-06-19 18:39:20 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:20 | ERROR    | src.sentiment_analyzer | [CSAN3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Por que esta empresa da Cosan (CSAN3) pode ser uma máquina d...'
+2026-06-19 18:39:20 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Por que esta empresa da Cosan (CSAN3) pode ser uma máquina d...'
+2026-06-19 18:39:20 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:20 | ERROR    | src.sentiment_analyzer | [CSAN3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Bank of America retoma cobertura da Cosan com recomendação d...'
+2026-06-19 18:39:20 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:39:20 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Bank of America retoma cobertura da Cosan com recomendação d...'
+2026-06-19 18:39:20 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:39:20 | ERROR    | src.sentiment_analyzer | [CSAN3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:39:20 | INFO     | src.storage | ✔ 7 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-06-19 18:39:20 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
+2026-06-19 18:57:47 | DEBUG    | src.storage | 28 artigos já processados no histórico.
+2026-06-19 18:57:47 | INFO     | src.rss_fetcher | [PASS3] ── Iniciando coleta multi-fonte ──
+2026-06-19 18:57:47 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=PASS3&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:57:48 | INFO     | src.rss_fetcher | [PASS3][GNews] 'PASS3' → 73 entradas
+2026-06-19 18:57:50 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Gas+E+Energia+SA&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:57:51 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Gas E Energia SA' → 76 entradas
+2026-06-19 18:57:52 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Energia&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:57:53 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Energia' → 88 entradas
+2026-06-19 18:57:55 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Comg%C3%A1s&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:57:56 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Comgás' → 100 entradas
+2026-06-19 18:57:57 | INFO     | src.rss_fetcher | [PASS3] Google News: 7 artigo(s)
+2026-06-19 18:57:57 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 18:57:58 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 18:57:59 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 18:57:59 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 18:58:01 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 18:58:01 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 18:58:03 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 18:58:03 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 18:58:04 | INFO     | src.rss_fetcher | [PASS3] Feeds extras: 0 artigo(s)
+2026-06-19 18:58:04 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 18:58:05 | WARNING  | src.rss_fetcher | [PASS3][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 18:58:05 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 18:58:05 | WARNING  | src.rss_fetcher | [PASS3][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 18:58:05 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Nenhum fato relevante no período.
+2026-06-19 18:58:05 | INFO     | src.rss_fetcher | [PASS3] Total coletado: 7 item(ns) (GNews: 7 | Extras: 0 | CVM: 0)
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Citi, JPMorgan e Itaú BBA iniciam cobertura da Compass (PASS...'
+2026-06-19 18:58:05 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Citi, JPMorgan e Itaú BBA iniciam cobertura da Compass (PASS...'
+2026-06-19 18:58:05 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:58:05 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'PASS3 ganha aval de grandes bancos e pode subir até 52% após...'
+2026-06-19 18:58:05 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzido:  'PASS3 ganha aval de grandes bancos e pode subir até 52% após...'
+2026-06-19 18:58:05 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:58:05 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass [PASS3]: a joia da coroa da Cosan que resiste ao cen...'
+2026-06-19 18:58:05 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass [PASS3]: a joia da coroa da Cosan que resiste ao cen...'
+2026-06-19 18:58:05 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:58:05 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'PASS3 projeta valorização superior a 50% com recomendações d...'
+2026-06-19 18:58:05 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzido:  'PASS3 projeta valorização superior a 50% com recomendações d...'
+2026-06-19 18:58:05 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:58:05 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass (PASS3): cinco bancos veem alta de até 49% e apontam...'
+2026-06-19 18:58:05 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass (PASS3): cinco bancos veem alta de até 49% e apontam...'
+2026-06-19 18:58:05 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:58:05 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'PASS3 com preço-alvo de R$ 33 e valorização de 32%. PASS3 co...'
+2026-06-19 18:58:05 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:58:05 | DEBUG    | src.sentiment_analyzer | Traduzido:  'PASS3 com preço-alvo de R$ 33 e valorização de 32%. PASS3 co...'
+2026-06-19 18:58:05 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:58:05 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:58:05 | INFO     | src.storage | ✔ 6 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-06-19 18:58:05 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
+2026-06-19 18:59:05 | DEBUG    | src.storage | 34 artigos já processados no histórico.
+2026-06-19 18:59:05 | INFO     | src.rss_fetcher | [PMAM3] ── Iniciando coleta multi-fonte ──
+2026-06-19 18:59:05 | DEBUG    | src.rss_fetcher | [PMAM3][GNews] https://news.google.com/rss/search?q=PMAM3&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:59:06 | INFO     | src.rss_fetcher | [PMAM3][GNews] 'PMAM3' → 96 entradas
+2026-06-19 18:59:08 | DEBUG    | src.rss_fetcher | [PMAM3][GNews] https://news.google.com/rss/search?q=Paranapanema+S.A.&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 18:59:09 | INFO     | src.rss_fetcher | [PMAM3][GNews] 'Paranapanema S.A.' → 100 entradas
+2026-06-19 18:59:10 | INFO     | src.rss_fetcher | [PMAM3] Google News: 3 artigo(s)
+2026-06-19 18:59:10 | DEBUG    | src.rss_fetcher | [PMAM3][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 18:59:10 | DEBUG    | src.rss_fetcher | [PMAM3][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 18:59:12 | DEBUG    | src.rss_fetcher | [PMAM3][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 18:59:12 | DEBUG    | src.rss_fetcher | [PMAM3][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 18:59:13 | DEBUG    | src.rss_fetcher | [PMAM3][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 18:59:15 | DEBUG    | src.rss_fetcher | [PMAM3][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 18:59:16 | DEBUG    | src.rss_fetcher | [PMAM3][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 18:59:17 | DEBUG    | src.rss_fetcher | [PMAM3][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 18:59:18 | INFO     | src.rss_fetcher | [PMAM3] Feeds extras: 0 artigo(s)
+2026-06-19 18:59:18 | DEBUG    | src.rss_fetcher | [PMAM3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 18:59:18 | WARNING  | src.rss_fetcher | [PMAM3][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 18:59:18 | DEBUG    | src.rss_fetcher | [PMAM3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 18:59:18 | WARNING  | src.rss_fetcher | [PMAM3][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 18:59:18 | DEBUG    | src.rss_fetcher | [PMAM3][CVM] Nenhum fato relevante no período.
+2026-06-19 18:59:18 | INFO     | src.rss_fetcher | [PMAM3] Total coletado: 3 item(ns) (GNews: 3 | Extras: 0 | CVM: 0)
+2026-06-19 18:59:18 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'GFSA3 avança 11,5% e Ibovespa sobe 0,3% na B3 hoje. GFSA3 av...'
+2026-06-19 18:59:18 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:59:18 | DEBUG    | src.sentiment_analyzer | Traduzido:  'GFSA3 avança 11,5% e Ibovespa sobe 0,3% na B3 hoje. GFSA3 av...'
+2026-06-19 18:59:18 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:59:18 | ERROR    | src.sentiment_analyzer | [PMAM3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:59:18 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'GFSA3 avança 13,0% e Ibovespa recua na B3 hoje. GFSA3 avança...'
+2026-06-19 18:59:18 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:59:18 | DEBUG    | src.sentiment_analyzer | Traduzido:  'GFSA3 avança 13,0% e Ibovespa recua na B3 hoje. GFSA3 avança...'
+2026-06-19 18:59:18 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:59:18 | ERROR    | src.sentiment_analyzer | [PMAM3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:59:18 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'GFSA3 salta 10,7% e Ibovespa avança 0,1% na B3 hoje. GFSA3 s...'
+2026-06-19 18:59:18 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 18:59:18 | DEBUG    | src.sentiment_analyzer | Traduzido:  'GFSA3 salta 10,7% e Ibovespa avança 0,1% na B3 hoje. GFSA3 s...'
+2026-06-19 18:59:18 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 18:59:18 | ERROR    | src.sentiment_analyzer | [PMAM3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 18:59:19 | INFO     | src.storage | ✔ 3 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-06-19 18:59:19 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
+2026-06-19 19:01:08 | DEBUG    | src.storage | 37 artigos já processados no histórico.
+2026-06-19 19:01:08 | INFO     | src.rss_fetcher | [PASS3] ── Iniciando coleta multi-fonte ──
+2026-06-19 19:01:08 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=PASS3&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:01:09 | INFO     | src.rss_fetcher | [PASS3][GNews] 'PASS3' → 73 entradas
+2026-06-19 19:01:11 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Gas+E+Energia+SA&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:01:12 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Gas E Energia SA' → 76 entradas
+2026-06-19 19:01:13 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Energia&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:01:14 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Energia' → 88 entradas
+2026-06-19 19:01:16 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Comg%C3%A1s&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:01:16 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Comgás' → 100 entradas
+2026-06-19 19:01:18 | INFO     | src.rss_fetcher | [PASS3] Google News: 7 artigo(s)
+2026-06-19 19:01:18 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 19:01:18 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 19:01:20 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 19:01:20 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 19:01:21 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 19:01:22 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 19:01:23 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 19:01:24 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 19:01:25 | INFO     | src.rss_fetcher | [PASS3] Feeds extras: 0 artigo(s)
+2026-06-19 19:01:25 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 19:01:26 | WARNING  | src.rss_fetcher | [PASS3][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 19:01:26 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 19:01:26 | WARNING  | src.rss_fetcher | [PASS3][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 19:01:26 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Nenhum fato relevante no período.
+2026-06-19 19:01:26 | INFO     | src.rss_fetcher | [PASS3] Total coletado: 7 item(ns) (GNews: 7 | Extras: 0 | CVM: 0)
+2026-06-19 19:03:33 | INFO     | src.rss_fetcher | [PASS3] ── Iniciando coleta multi-fonte ──
+2026-06-19 19:03:33 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=PASS3&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:03:34 | INFO     | src.rss_fetcher | [PASS3][GNews] 'PASS3' → 73 entradas
+2026-06-19 19:03:36 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Gas+E+Energia+SA&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:03:37 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Gas E Energia SA' → 76 entradas
+2026-06-19 19:03:38 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Energia&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:03:39 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Energia' → 88 entradas
+2026-06-19 19:03:41 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Comg%C3%A1s&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:03:42 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Comgás' → 100 entradas
+2026-06-19 19:03:43 | INFO     | src.rss_fetcher | [PASS3] Google News: 7 artigo(s)
+2026-06-19 19:03:43 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 19:03:44 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 19:03:45 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 19:03:45 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 19:03:47 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 19:03:47 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 19:03:49 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 19:03:49 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 19:03:50 | INFO     | src.rss_fetcher | [PASS3] Feeds extras: 0 artigo(s)
+2026-06-19 19:03:50 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2026.csv
+2026-06-19 19:03:50 | WARNING  | src.rss_fetcher | [PASS3][CVM] Erro ao baixar CSV 2026: HTTP Error 404: Not Found
+2026-06-19 19:03:50 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Consultando https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FR/DADOS/fr_cia_aberta_2025.csv
+2026-06-19 19:03:51 | WARNING  | src.rss_fetcher | [PASS3][CVM] Erro ao baixar CSV 2025: HTTP Error 404: Not Found
+2026-06-19 19:03:51 | DEBUG    | src.rss_fetcher | [PASS3][CVM] Nenhum fato relevante no período.
+2026-06-19 19:03:51 | INFO     | src.rss_fetcher | [PASS3] Total coletado: 7 item(ns) (GNews: 7 | Extras: 0 | CVM: 0)
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Citi, JPMorgan e Itaú BBA iniciam cobertura da Compass (PASS...'
+2026-06-19 19:03:51 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Citi, JPMorgan e Itaú BBA iniciam cobertura da Compass (PASS...'
+2026-06-19 19:03:51 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 19:03:51 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'PASS3 ganha aval de grandes bancos e pode subir até 52% após...'
+2026-06-19 19:03:51 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzido:  'PASS3 ganha aval de grandes bancos e pode subir até 52% após...'
+2026-06-19 19:03:51 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 19:03:51 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass [PASS3]: a joia da coroa da Cosan que resiste ao cen...'
+2026-06-19 19:03:51 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass [PASS3]: a joia da coroa da Cosan que resiste ao cen...'
+2026-06-19 19:03:51 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 19:03:51 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'PASS3 projeta valorização superior a 50% com recomendações d...'
+2026-06-19 19:03:51 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzido:  'PASS3 projeta valorização superior a 50% com recomendações d...'
+2026-06-19 19:03:51 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 19:03:51 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass (PASS3): cinco bancos veem alta de até 49% e apontam...'
+2026-06-19 19:03:51 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass (PASS3): cinco bancos veem alta de até 49% e apontam...'
+2026-06-19 19:03:51 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 19:03:51 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'PASS3 com preço-alvo de R$ 33 e valorização de 32%. PASS3 co...'
+2026-06-19 19:03:51 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzido:  'PASS3 com preço-alvo de R$ 33 e valorização de 32%. PASS3 co...'
+2026-06-19 19:03:51 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 19:03:51 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Por que esta empresa da Cosan (CSAN3) pode ser uma máquina d...'
+2026-06-19 19:03:51 | WARNING  | src.sentiment_analyzer | Falha na tradução (usando original): No module named 'deep_translator'
+2026-06-19 19:03:51 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Por que esta empresa da Cosan (CSAN3) pode ser uma máquina d...'
+2026-06-19 19:03:51 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-19 19:03:51 | ERROR    | src.sentiment_analyzer | [PASS3] Erro na análise: No module named 'transformers'
+Traceback (most recent call last):
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 251, in analisar_sentimento
+    label_bart,    score_bart,    scores_bart    = _inferir_bart(texto)
+                                                   ~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 144, in _inferir_bart
+    clf  = _get_pipeline_bart()
+  File "C:\Users\URM\UNIVESP_AULA\analise-de-noticias-financeiras\src\sentiment_analyzer.py", line 55, in _get_pipeline_bart
+    from transformers import pipeline
+ModuleNotFoundError: No module named 'transformers'
+2026-06-19 19:03:51 | INFO     | src.storage | ✔ 7 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-06-19 19:03:51 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
+2026-06-19 19:22:02 | DEBUG    | src.storage | 7 artigos já processados no histórico.
+2026-06-19 19:22:02 | INFO     | src.rss_fetcher | [PASS3] ── Iniciando coleta multi-fonte ──
+2026-06-19 19:22:02 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=PASS3&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:22:03 | INFO     | src.rss_fetcher | [PASS3][GNews] 'PASS3' → 73 entradas
+2026-06-19 19:22:05 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Gas+E+Energia+SA&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:22:05 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Gas E Energia SA' → 76 entradas
+2026-06-19 19:22:07 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Compass+Energia&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:22:08 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Compass Energia' → 88 entradas
+2026-06-19 19:22:09 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=Comg%C3%A1s&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-19 19:22:10 | INFO     | src.rss_fetcher | [PASS3][GNews] 'Comgás' → 100 entradas
+2026-06-19 19:22:12 | INFO     | src.rss_fetcher | [PASS3] Google News: 7 artigo(s)
+2026-06-19 19:22:12 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-19 19:22:12 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-19 19:22:14 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-19 19:22:14 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] 10 entradas no feed — filtrando...
+2026-06-19 19:22:16 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-19 19:22:16 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-19 19:22:18 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-19 19:22:18 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] 10 entradas no feed — filtrando...
+2026-06-19 19:22:19 | INFO     | src.rss_fetcher | [PASS3] Feeds extras: 0 artigo(s)
+2026-06-19 19:22:19 | INFO     | src.rss_fetcher | [PASS3] Total coletado: 7 item(ns) (GNews: 7 | Extras: 0)

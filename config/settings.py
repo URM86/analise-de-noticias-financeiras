@@ -2,13 +2,11 @@
 ============================================================
 config/settings.py
 Configurações centrais do sistema de monitoramento de
-sentimento de mercado via Google News RSS + feeds extras + CVM.
+sentimento de mercado via Google News RSS + feeds extras.
 
 ONDE ALTERAR CADA COISA:
-  - Período de pesquisa  → IDADE_MAXIMA_HORAS (linha ~130)
-  - Adicionar site RSS   → FEEDS_RSS_EXTRAS   (linha ~115)
-  - Ativar/desativar CVM → CVM_ATIVO          (linha ~145)
-  - Adicionar ticker CVM → CVM_CNPJ           (linha ~150)
+  - Período de pesquisa  → IDADE_MAXIMA_HORAS (linha ~125)
+  - Adicionar site RSS   → FEEDS_RSS_EXTRAS   (linha ~110)
   - Trocar modelo de IA  → MODELO_BART / MODELO_FINBERT (linha ~80)
 ============================================================
 """
@@ -130,43 +128,6 @@ FEEDS_RSS_EXTRAS = [
         "ativo": True,
     }
 ]
-
-# ── API da CVM — Fatos Relevantes Oficiais ───────────────────────────────────
-# A CVM publica fatos relevantes, comunicados e resultados via dados abertos.
-# O sistema consulta por CNPJ e filtra documentos do período configurado.
-#
-# COMO ADICIONAR NOVO TICKER: inclua o CNPJ (só dígitos) no dict abaixo.
-# COMO DESATIVAR COMPLETAMENTE: mude CVM_ATIVO para False.
-CVM_ATIVO = True
-
-# CNPJ de cada empresa (somente dígitos, sem pontos/traços/barras)
-CVM_CNPJ = {
-    "BBDC4": "60746948000112",   # Bradesco
-    "BBDC3": "60746948000112",   # Bradesco (mesmo CNPJ, classe diferente)
-    "BEES4": "28130139000145",   # Banestes
-    "JHSF3": "08294224000165",   # JHSF Participações
-    "ITSA4": "61532644000115",   # Itaúsa
-    "CXSE3": "14388334000199",   # Caixa Seguridade
-    "TAEE4": "02461786000170",   # Taesa
-    "ABCB4": "28195667000106",   # ABC Brasil
-    "CMIG4": "17155730000164",   # Cemig
-    "SAUD3": "60460348000112",   # Hypera Pharma
-    "PASS3": "09296295000160",   # Azul Linhas Aéreas
-    "CSAN3": "50746577000115",   # Cosan
-    "PMAM3": "60850229000146",   # Paranapanema
-}
-
-# URL da API de dados abertos da CVM
-# Documentação: https://dados.cvm.gov.br/
-CVM_API_FATOS = (
-    "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFIN/DADOS/"
-)
-# Endpoint de busca de fatos relevantes (sistema ENET da CVM)
-CVM_ENET_URL = (
-    "https://www.rad.cvm.gov.br/ENET/frmConsultaExternaCVM.aspx"
-)
-
-MAX_FATOS_CVM = 5   # máximo de fatos relevantes por ticker por execução
 
 # ── Limites de coleta ────────────────────────────────────────────────────────
 MAX_ARTIGOS_POR_TICKER = 15   # máximo de artigos RSS por ticker por execução
