@@ -1,6 +1,6 @@
 # Análise de Sentimento de Mercado — Ações B3
 
-Coleta notícias via Google News RSS e fontes especializadas como Bloomberg Línea Brasil, InfoMoney, Brazil Journal e NeoFeed, além de fatos relevantes oficiais publicados na CVM, para calcular _scores_ de sentimento aplicados à análise de ações da B3 utilizando os modelos **FinBERT** e **BART-large-MNLI** disponibilizados pela plataforma Hugging Face.
+Coleta notícias via Google News RSS e fontes especializadas como Bloomberg Línea Brasil, InfoMoney, Brazil Journal e NeoFeed para calcular _scores_ de sentimento aplicados à análise de ações da B3 utilizando os modelos **FinBERT** e **BART-large-MNLI** disponibilizados pela plataforma Hugging Face.
 
 A proposta do projeto é inspirada no [B3Analysis](https://github.com/guhcostan/b3analysis), enquanto a estrutura inicial do código foi desenvolvida com auxílio do Claude (Anthropic).
 
@@ -19,7 +19,6 @@ Para cada ação monitorada, o sistema executa automaticamente três etapas:
 - **InfoMoney** — feed RSS do maior portal de finanças pessoais do Brasil
 - **Brazil Journal** — feed RSS do portal especializado em negócios e mercado de capitais
 - **NeoFeed** — feed RSS do portal focado em empreendedorismo, inovação e finanças
-- **CVM — Dados Abertos** — fatos relevantes, comunicados ao mercado e documentos regulatórios consultados diretamente via API pública da Comissão de Valores Mobiliários, filtrados pelo CNPJ de cada empresa (Esta etapa ainda está em construção)
 
 Cada artigo é deduplicado por hash MD5 da URL. Artigos já processados em execuções anteriores são ignorados automaticamente para evitar retrabalho.
 
