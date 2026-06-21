@@ -2,10 +2,10 @@
 
 Coleta notícias via Google News RSS e fontes especializadas como Bloomberg Línea Brasil, InfoMoney, Brazil Journal e NeoFeed para calcular _scores_ de sentimento aplicados à análise de ações da B3 utilizando os modelos **FinBERT** e **BART-large-MNLI** disponibilizados pela plataforma Hugging Face.
 
-A proposta do projeto é inspirada no [B3Analysis](https://github.com/guhcostan/b3analysis), enquanto a estrutura inicial do código foi desenvolvida com auxílio do Claude (Anthropic).
+A proposta do projeto é inspirada no [B3Analysis](https://github.com/guhcostan/b3analysis).
 
 > **Atenção**
-> Este projeto possui finalidade educacional e de estudo pessoal. Os relatórios são gerados por modelos de linguagem e não constituem recomendação de investimento, consultoria financeira ou análise profissional. Investimentos em renda variável envolvem risco de perda parcial ou total do capital investido. Antes de investir, consulte um profissional autorizado e registrado na Comissão de Valores Mobiliários (CVM).
+> Este projeto possui finalidade educacional e de estudo pessoal. Os relatórios são gerados por modelos de linguagem e não constituem recomendação de investimento, consultoria financeira ou análise profissional.
 ---
 
 ## O que este sistema faz
@@ -91,7 +91,7 @@ market_sentiment/
 
 ## Pré-requisitos
 
-- **Python 3.10 ou superior** — verifique com `python --version`
+- **Python 3.10 ou superior** — verifique com `py --version`
 
 ---
 
@@ -125,13 +125,13 @@ Todos os comandos abaixo devem ser rodados dentro da pasta do projeto.
 ### Análise completa — todos os 13 tickers
 
 ```bash
-python main.py
+py main.py
 ```
 
 ### Analisar apenas tickers específicos
 
 ```bash
-python main.py --tickers BBDC4 ITSA4 CSAN3
+py main.py --tickers BBDC4 ITSA4 CSAN3
 ```
 
 ### Desativar a tradução automática
@@ -139,14 +139,14 @@ python main.py --tickers BBDC4 ITSA4 CSAN3
 Por padrão, o sistema traduz os textos para inglês antes da análise, pois os modelos são mais precisos em inglês. Para desativar (análise direto em português, mais rápido porém menos preciso):
 
 ```bash
-python main.py --sem-traducao
+py main.py --sem-traducao
 ```
 
 ### Controlar o nível de detalhe dos logs
 
 ```bash
-python main.py --log-nivel DEBUG    # mostra tudo, incluindo cada requisição HTTP
-python main.py --log-nivel WARNING  # mostra apenas alertas e erros
+py main.py --log-nivel DEBUG    # mostra tudo, incluindo cada requisição HTTP
+py main.py --log-nivel WARNING  # mostra apenas alertas e erros
 ```
 
 ### No VSCode — pressione F5
@@ -155,7 +155,7 @@ O arquivo `.vscode/launch.json` já contém cinco configurações prontas:
 
 | Nome | O que faz |
 |------|-----------|
-| ▶ Executar (todos os tickers) | Roda `python main.py` normalmente |
+| ▶ Executar (todos os tickers) | Roda `py main.py` normalmente |
 | 🔍 Debug – BBDC4 apenas | Roda só o BBDC4 com log DEBUG, permite breakpoints |
 | 🔄 Daemon Mode (60 min) | Loop automático a cada hora |
 | ⚡ Sem tradução (rápido) | Todos os tickers sem traduzir |

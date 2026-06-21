@@ -134,7 +134,7 @@ MAX_ARTIGOS_POR_TICKER = 15   # máximo de artigos RSS por ticker por execução
 
 # ↓ ALTERE AQUI para mudar o período de pesquisa das notícias
 # Exemplos: 24 = só hoje | 48 = 2 dias | 72 = 3 dias | 168 = 1 semana
-IDADE_MAXIMA_HORAS = 48
+IDADE_MAXIMA_HORAS = 168
 
 # ── Tradução ─────────────────────────────────────────────────────────────────
 TRADUZIR_PARA_INGLES = True   # False = analisa em português (menos preciso)

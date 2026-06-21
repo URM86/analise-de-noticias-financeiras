@@ -3109,3 +3109,325 @@ TypeError: string indices must be integers, not 'str'
 2026-06-21 10:58:31 | DEBUG    | httpcore.connection | close.complete
 2026-06-21 10:58:31 | DEBUG    | httpcore.connection | close.started
 2026-06-21 10:58:31 | DEBUG    | httpcore.connection | close.complete
+2026-06-21 11:07:30 | DEBUG    | src.storage | 7 artigos já processados no histórico.
+2026-06-21 11:07:30 | INFO     | src.rss_fetcher | [PASS3] ── Iniciando coleta multi-fonte ──
+2026-06-21 11:07:30 | DEBUG    | src.rss_fetcher | [PASS3][GNews] https://news.google.com/rss/search?q=PASS3&hl=pt-BR&gl=BR&ceid=BR:pt-419
+2026-06-21 11:07:30 | INFO     | src.rss_fetcher | [PASS3][GNews] 'PASS3' → 76 entradas
+2026-06-21 11:07:32 | INFO     | src.rss_fetcher | [PASS3] Google News: 7 artigo(s)
+2026-06-21 11:07:32 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Varrendo https://www.bloomberglinea.com.br/arc/outboundfeeds/new-news-feed/?outputType=xml
+2026-06-21 11:07:32 | DEBUG    | src.rss_fetcher | [PASS3][Bloomberg Línea Brasil] Feed vazio ou inacessível.
+2026-06-21 11:07:34 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] Varrendo https://www.infomoney.com.br/feed/
+2026-06-21 11:07:34 | DEBUG    | src.rss_fetcher | [PASS3][Infomoney] 10 entradas no feed — filtrando...
+2026-06-21 11:07:35 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] Varrendo https://braziljournal.com/rss
+2026-06-21 11:07:36 | DEBUG    | src.rss_fetcher | [PASS3][Brazil Journal] 10 entradas no feed — filtrando...
+2026-06-21 11:07:38 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] Varrendo https://neofeed.com.br/feed/
+2026-06-21 11:07:39 | DEBUG    | src.rss_fetcher | [PASS3][Neofeed] 10 entradas no feed — filtrando...
+2026-06-21 11:07:40 | INFO     | src.rss_fetcher | [PASS3] Feeds extras: 0 artigo(s)
+2026-06-21 11:07:40 | INFO     | src.rss_fetcher | [PASS3] Total coletado: 7 item(ns) (GNews: 7 | Extras: 0)
+2026-06-21 11:07:40 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Citi, JPMorgan e Itaú BBA iniciam cobertura da Compass (PASS...'
+2026-06-21 11:07:41 | DEBUG    | src.sentiment_analyzer | Tradutor PT→EN inicializado.
+2026-06-21 11:07:41 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-06-21 11:07:41 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Citi%2C+JPMorgan+e+Ita%C3%BA+BBA+iniciam+cobertura+da+Compass+%28PASS3%29+com+recomenda%C3%A7%C3%A3o+de+compra.+Citi%2C+JPMorgan+e+Ita%C3%BA+BBA+iniciam+cobertura+da+Compass+%28PASS3%29+com+recomenda%C3%A7%C3%A3o+de+compra+Estad%C3%A3o HTTP/1.1" 200 None
+2026-06-21 11:07:42 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Citi, JPMorgan and Itaú BBA begin coverage of Compass (PASS3...'
+2026-06-21 11:07:42 | INFO     | src.sentiment_analyzer | [BART] Carregando 'facebook/bart-large-mnli'... (~1.6GB, só na primeira vez)
+2026-06-21 11:07:48 | DEBUG    | httpcore.connection | connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=10 socket_options=None
+2026-06-21 11:07:48 | DEBUG    | httpcore.connection | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023D0101F620>
+2026-06-21 11:07:48 | DEBUG    | httpcore.connection | start_tls.started ssl_context=<ssl.SSLContext object at 0x0000023D01043050> server_hostname='huggingface.co' timeout=10
+2026-06-21 11:07:48 | DEBUG    | httpcore.connection | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023D01045F90>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'252'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:12 GMT'), (b'Location', b'/api/resolve-cache/models/facebook/bart-large-mnli/d7645e127eaf1aefc7862fd59a17a5aa8558b8ce/config.json?%2Ffacebook%2Fbart-large-mnli%2Fresolve%2Fmain%2Fconfig.json=&etag=%22dfc96c728b40cc131e46b1c424c8e072d52b6d74%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04c-6047a4bc4bf84efb3917f948;953923ad-c511-4ba6-a853-c0a0b97e759d'), (b'RateLimit', b'"resolvers";r=2999;t=236'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'd7645e127eaf1aefc7862fd59a17a5aa8558b8ce'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"dfc96c728b40cc131e46b1c424c8e072d52b6d74"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'DNhhfUqTKvZ8vwLPKFaJ_meqRIMCZBThMr4lrZm45GVoP8dPQSZN1w==')])
+2026-06-21 11:07:48 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/facebook/bart-large-mnli/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:48 | WARNING  | huggingface_hub.utils._http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'1154'), (b'Connection', b'keep-alive'), (b'Date', b'Wed, 25 Jun 2025 12:44:06 GMT'), (b'ETag', b'"dfc96c728b40cc131e46b1c424c8e072d52b6d74"'), (b'X-Powered-By', b'huggingface-moon'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'X-Request-Id', b'Root=1-685bef16-2c276c0974c57fdd43155890;ba362354-09fa-4950-a492-905ca01671ac'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'd7645e127eaf1aefc7862fd59a17a5aa8558b8ce'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'ZyTOq-X60nMcY00LpP64HOIAnWr8awmkVS7wgJNYiELt2U_walAHug=='), (b'Age', b'31195446')])
+2026-06-21 11:07:48 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/facebook/bart-large-mnli/d7645e127eaf1aefc7862fd59a17a5aa8558b8ce/config.json "HTTP/1.1 200 OK"
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:48 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'64'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:12 GMT'), (b'ETag', b'W/"40-09f9IAqP13xarAhQxFS2W8rvRkM"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04c-21c62673032883070527b7f6;bc0d6ce5-9d5f-4be1-b916-085b8f64efa1'), (b'RateLimit', b'"api";r=499;t=236'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'additional_chat_templates does not exist on "main"'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'9rF5RkywBbI_-8l4ag_IKNXdkChhlF6Mt0oTdZUMnJnYn17jqDAWJQ==')])
+2026-06-21 11:07:49 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/facebook/bart-large-mnli/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:13 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"77c-/un5tCBj6Un3V03B9v4M+Mnt96U"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04d-7cd96d715e3655e379355796;6ef688f9-6396-4893-8481-c1cb6d6e9e4e'), (b'RateLimit', b'"api";r=498;t=235'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'GPqzEwMyIjvpy2Ly8iAHRRjGch0ZMFDLnmlglv9ruD0S9J2T2EmNBQ==')])
+2026-06-21 11:07:49 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/facebook/bart-large-mnli/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:49 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:13 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04d-7279cc32214e281f2ac6149e;733755a6-c848-4aff-b572-d704c49ada5a'), (b'RateLimit', b'"resolvers";r=2998;t=235'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'd7645e127eaf1aefc7862fd59a17a5aa8558b8ce'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'Cre9euA8AFB11vDtOzdfyuJKk6OcxJewsbF55Xnk_xEgo7ZPtx9YfA==')])
+2026-06-21 11:07:50 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/facebook/bart-large-mnli/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:13 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04d-719639091dd714c445939411;c4f55c60-1e5f-4bca-b6a3-241c4bb59277'), (b'RateLimit', b'"resolvers";r=2997;t=235'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'd7645e127eaf1aefc7862fd59a17a5aa8558b8ce'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'Uhdjmk3cMyvkaBkI96IUe9R4wvP7Goco98AFgUrICGahu9oBC-TkAA==')])
+2026-06-21 11:07:50 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/facebook/bart-large-mnli/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:13 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04d-68bc4ca126337c482a543c03;6b7b3d9e-fffc-4f36-b65d-885720599d0d'), (b'RateLimit', b'"resolvers";r=2996;t=235'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'd7645e127eaf1aefc7862fd59a17a5aa8558b8ce'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'chYr2gjJYnQNNuwpzpyod6BngcchQ394qlz1Ww457zo9CbXA4Z0HBg==')])
+2026-06-21 11:07:50 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/facebook/bart-large-mnli/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:50 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:50 | INFO     | src.sentiment_analyzer | [BART] Modelo carregado.
+2026-06-21 11:07:51 | INFO     | src.sentiment_analyzer | [FinBERT] Carregando 'ProsusAI/finbert'... (~400MB, só na primeira vez)
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'236'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:14 GMT'), (b'Location', b'/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json?%2FProsusAI%2Ffinbert%2Fresolve%2Fmain%2Fconfig.json=&etag=%22e3d6323dc93e170f3eef66cebb32dbaf4589aee0%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04e-5946529b304cb7935a6fc850;6a564365-9ade-461c-9035-05416f06679e'), (b'RateLimit', b'"resolvers";r=2995;t=234'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4556d13015211d73dccd3fdd39d39232506f3e43'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"e3d6323dc93e170f3eef66cebb32dbaf4589aee0"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'fgW1D1y4wF0YRyDJGSK3RtpkQ6DJEZSz8H4ID_bUOXtAhOKxWCFyUQ==')])
+2026-06-21 11:07:51 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'758'), (b'Connection', b'keep-alive'), (b'Date', b'Wed, 25 Jun 2025 12:44:08 GMT'), (b'ETag', b'"e3d6323dc93e170f3eef66cebb32dbaf4589aee0"'), (b'X-Powered-By', b'huggingface-moon'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'X-Request-Id', b'Root=1-685bef18-34fb11fb5a5695d20f236c05;03f7494a-e399-4e45-b134-896edfb10221'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4556d13015211d73dccd3fdd39d39232506f3e43'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'kdEdgMUaOINMDaY64oUk_rLq--VfA3zT8WbbmAZgC8BAgFZdujIeSA=='), (b'Age', b'31195447')])
+2026-06-21 11:07:51 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:15 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04f-7199d41f154dc10f41e8303b;96edcaf9-d5dd-4c14-875b-f681f2a99a48'), (b'RateLimit', b'"resolvers";r=2994;t=233'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4556d13015211d73dccd3fdd39d39232506f3e43'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'QW250KwAlLR7PLUudYtdD5h-02_ch-mL0NmTtqHgYh0Pw41fKG2HzA==')])
+2026-06-21 11:07:51 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:15 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"12ab-rNTsT7ebcpys6jY0UyqiEmtFwsI"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04f-32ec363e430a89ea2ebabae4;5818c9da-e6f7-4859-934e-9478469a9b32'), (b'RateLimit', b'"api";r=497;t=233'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'm2EZAixUK99_uZ-gAciDjdfq0WuIDatKOoh8lJKZT1Omm7dibrA4bA==')])
+2026-06-21 11:07:51 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert "HTTP/1.1 200 OK"
+2026-06-21 11:07:51 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:15 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"136e-vV7sMNIha2Qfgickoq5EIefqEtA"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04f-24af393c0d4aa74b6da9c604;f674fef7-ed0b-4ca3-b96a-27f8575d4d6b'), (b'RateLimit', b'"api";r=496;t=233'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Total-Count', b'20'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'HDf91KrKI2osXuWCV6Rte2BmIRv1w-QLOaSBzeuekddGWazbEGaMqw==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/main "HTTP/1.1 200 OK"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.connection | connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=None socket_options=None
+2026-06-21 11:07:52 | DEBUG    | httpcore.connection | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023D01486AD0>
+2026-06-21 11:07:52 | DEBUG    | httpcore.connection | start_tls.started ssl_context=<ssl.SSLContext object at 0x0000023D01043050> server_hostname='huggingface.co' timeout=None
+2026-06-21 11:07:52 | DEBUG    | httpcore.connection | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023D013DE520>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:15 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"4a16-fuabEkmCJ0b4RbycjOf1cC0Rou4"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04f-4a5bd7c11467277652becd37;8b2d9a91-b47e-464b-9094-f4f7acb92302'), (b'RateLimit', b'"api";r=495;t=233'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'9yQEnRaV-EFAc6y0erVDV8yalO-SdDgjmNzeVjHQtbBfhju6pE2Qjw==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/discussions?p=0 "HTTP/1.1 200 OK"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'64'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:15 GMT'), (b'ETag', b'W/"40-09f9IAqP13xarAhQxFS2W8rvRkM"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04f-2b29640738ef39c12e038705;f3cd7ac6-d4dd-46a8-87b8-6f3603d03c4d'), (b'RateLimit', b'"api";r=494;t=233'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'additional_chat_templates does not exist on "main"'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 3d99ffac15bb1b2dc5bbfb938f941ee0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'MqqJVsZe_b8GtpfQiD_D7do5WGLYjqQupcyQCXwuhTIp1R6tKcvTSw==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:16 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"1733-KxgenqgVjLwFOfleUCxyQlwTkkw"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f04f-77e7ce191e0ed2ca38afc95e;6f0f2fdb-a891-4122-b3b8-dbee2116ac44'), (b'RateLimit', b'"api";r=493;t=233'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Total-Count', b'21'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'TaOf6V9JuAwvpeYD83rE0OUYSN529VeKOy1U36MTR9W4iHa8B8_s5A==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/refs%2Fpr%2F29 "HTTP/1.1 200 OK"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:16 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"5e5-r/u/581GlpJMeOnBmwMBTQyR870"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f050-7ef6ab2a6893a7027c472727;52ca8f11-3322-4dcb-b409-baae0e134533'), (b'RateLimit', b'"api";r=492;t=232'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 3d99ffac15bb1b2dc5bbfb938f941ee0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'zx44SymgFR7PUxGmkjfQby3Bs8qeMCuRLdlSnD-3fws_p2NQwGb9Tw==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'GET']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:16 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f050-3c65b4621e5d11c849b9920d;a35208a0-5863-4fe1-89e8-5846b4770042'), (b'RateLimit', b'"resolvers";r=2993;t=232'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'7db323f79b751944bcfa66298ec06977e4518306'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'gNvb8dKMlEWx2tfV8zh3AxpBNfLNPKLW5-i-FCDvmnugV8bQA1ofKg==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:16 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f050-5a1eecae071e2b1137f10b1e;875add9f-c5ae-4277-ba64-3627fdde2cff'), (b'RateLimit', b'"resolvers";r=2992;t=232'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4556d13015211d73dccd3fdd39d39232506f3e43'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 3d99ffac15bb1b2dc5bbfb938f941ee0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'fGGkzDXAIPT5qNpf3gHSW8X2cfVsVaCB38XoImQNy7MBENP2xnquKQ==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 302, b'Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'1010'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:16 GMT'), (b'Location', b'https://cas-bridge.xethub.hf.co/xet-bridge-us/621ffdc036468d709f176f71/97c9cb12d04352c17ea4a86542c6411d19940e4418e13199087eba3230f3c144?Expires=1782054496&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jYXMtYnJpZGdlLnhldGh1Yi5oZi5jby94ZXQtYnJpZGdlLXVzLzYyMWZmZGMwMzY0NjhkNzA5ZjE3NmY3MS85N2M5Y2IxMmQwNDM1MmMxN2VhNGE4NjU0MmM2NDExZDE5OTQwZTQ0MThlMTMxOTkwODdlYmEzMjMwZjNjMTQ0KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc4MjA1NDQ5Nn19fV19&Signature=MEUCIEFJ7n2F65DSRM3jva4WDYkCRjt8Arkm9Bevj8RJsyrIAiEA4uIiEubmpIC4wm9tjZKM0oFJY9MlMQBfS8L-n0FKnGo_&Key-Pair-Id=K1LYXO563TGWFU&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=cas%2F20260621%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260621T140816Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=237ac183abf4a2534ee3b24bb8f1cf235a540caf7160406b920daf4fbe59aa3d'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f050-0d8ee33973c54b617859a0d0;a0b46a70-5e42-43d7-afb2-c8731f9e3795'), (b'RateLimit', b'"resolvers";r=2991;t=232'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'7db323f79b751944bcfa66298ec06977e4518306'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'X-Linked-Size', b'437965908'), (b'X-Linked-ETag', b'"e5897858ff819aad7629b96ce521ae5477952d03634ef5dd30ed2d76357a9f00"'), (b'X-Xet-Hash', b'97c9cb12d04352c17ea4a86542c6411d19940e4418e13199087eba3230f3c144'), (b'Link', b'<https://huggingface.co/api/models/ProsusAI/finbert/xet-read-token/7db323f79b751944bcfa66298ec06977e4518306>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/97c9cb12d04352c17ea4a86542c6411d19940e4418e13199087eba3230f3c144>; rel="xet-reconstruction-info"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'Z0sF1ALsn2A-Qa8lmx8eeugNzp0wU7huadRI5b0nTfzuxc1HgNNoJA==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors "HTTP/1.1 302 Found"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:16 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f050-5b1c4c7a60a2366125abd8dd;c25767f2-9e7f-41ed-9d77-c12bd45e4d14'), (b'RateLimit', b'"resolvers";r=2990;t=232'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4556d13015211d73dccd3fdd39d39232506f3e43'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 3d99ffac15bb1b2dc5bbfb938f941ee0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'zR3ie8UlD6EkezZmRulfX1J_eNhmvoXVilsyySlxXvtsM2_Awqqshg==')])
+2026-06-21 11:07:52 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_headers.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | send_request_body.complete
+2026-06-21 11:07:52 | DEBUG    | httpcore.http11 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-06-21 11:07:53 | DEBUG    | httpcore.http11 | receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 14:08:16 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a37f050-72ffba7141d9519e26b53b0f;2901000f-0516-49f9-8ebb-75b5c4db2870'), (b'RateLimit', b'"resolvers";r=2989;t=232'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4556d13015211d73dccd3fdd39d39232506f3e43'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 339541f80dd6b330fceaa26d29d35c56.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'GRU1-P3'), (b'X-Amz-Cf-Id', b'1nqOQMiMPaqyt0Pd3gjos506B7S4pdw2-mjK6JmzMtI70Sd4Qb1S8Q==')])
+2026-06-21 11:07:53 | INFO     | httpx | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-21 11:07:53 | DEBUG    | httpcore.http11 | receive_response_body.started request=<Request [b'HEAD']>
+2026-06-21 11:07:53 | DEBUG    | httpcore.http11 | receive_response_body.complete
+2026-06-21 11:07:53 | DEBUG    | httpcore.http11 | response_closed.started
+2026-06-21 11:07:53 | DEBUG    | httpcore.http11 | response_closed.complete
+2026-06-21 11:07:53 | INFO     | src.sentiment_analyzer | [FinBERT] Modelo carregado.
+2026-06-21 11:07:53 | DEBUG    | src.sentiment_analyzer | [PASS3] 'Citi, JPMorgan e Itaú BBA iniciam cobertura d'
+  BART:    positive   93%
+  FinBERT: neutral    90%
+  → BART vence (93%) | ✗ divergem
+2026-06-21 11:07:53 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass (PASS3): 4 bancos iniciam cobertura recomendando com...'
+2026-06-21 11:07:53 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-06-21 11:07:53 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Compass+%28PASS3%29%3A+4+bancos+iniciam+cobertura+recomendando+compra+e+a%C3%A7%C3%A3o+sobe+forte.+Compass+%28PASS3%29%3A+4+bancos+iniciam+cobertura+recomendando+compra+e+a%C3%A7%C3%A3o+sobe+forte+InfoMoney HTTP/1.1" 200 None
+2026-06-21 11:07:53 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass (PASS3): 4 banks begin coverage recommending purchas...'
+2026-06-21 11:07:54 | DEBUG    | src.sentiment_analyzer | [PASS3] 'Compass (PASS3): 4 bancos iniciam cobertura r'
+  BART:    positive   97%
+  FinBERT: neutral    44%
+  → BART vence (97%) | ✗ divergem
+2026-06-21 11:07:54 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass (PASS3) virou a nova aposta da Faria Lima? Ação conq...'
+2026-06-21 11:07:54 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-06-21 11:07:54 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Compass+%28PASS3%29+virou+a+nova+aposta+da+Faria+Lima%3F+A%C3%A7%C3%A3o+conquista+selo+de+compra+de+tr%C3%AAs+banc%C3%B5es+%E2%80%94+e+potencial+de+alta+passa+dos+50%25.+Compass+%28PASS3%29+virou+a+nova+aposta+da+Faria+Lima%3F+A%C3%A7%C3%A3o+conquista+selo+de+compra+de+tr%C3%AAs+banc%C3%B5es+%E2%80%94+e+potencial+de+alta+passa+dos+50%25+Seu+Dinheiro HTTP/1.1" 200 None
+2026-06-21 11:07:54 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass (PASS3) has become Faria Lima's new bet? Action wins...'
+2026-06-21 11:07:55 | DEBUG    | src.sentiment_analyzer | [PASS3] 'Compass (PASS3) virou a nova aposta da Faria '
+  BART:    positive   97%
+  FinBERT: neutral    71%
+  → BART vence (97%) | ✗ divergem
+2026-06-21 11:07:55 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass (PASS3) pagará R$ 405,5 milhões em dividendos neste ...'
+2026-06-21 11:07:55 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-06-21 11:07:55 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Compass+%28PASS3%29+pagar%C3%A1+R%24+405%2C5+milh%C3%B5es+em+dividendos+neste+m%C3%AAs%3B+veja+quem+tem+direito.+Compass+%28PASS3%29+pagar%C3%A1+R%24+405%2C5+milh%C3%B5es+em+dividendos+neste+m%C3%AAs%3B+veja+quem+tem+direito+Money+Times HTTP/1.1" 200 None
+2026-06-21 11:07:55 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass (PASS3) will pay R$405.5 million in dividends this m...'
+2026-06-21 11:07:56 | DEBUG    | src.sentiment_analyzer | [PASS3] 'Compass (PASS3) pagará R$ 405,5 milhões em di'
+  BART:    positive   77%
+  FinBERT: neutral    95%
+  → FinBERT vence (95%) | ✗ divergem
+2026-06-21 11:07:56 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass [PASS3]: a joia da coroa da Cosan que resiste ao cen...'
+2026-06-21 11:07:56 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-06-21 11:07:56 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Compass+%5BPASS3%5D%3A+a+joia+da+coroa+da+Cosan+que+resiste+ao+cen%C3%A1rio+macro+adverso.+Compass+%5BPASS3%5D%3A+a+joia+da+coroa+da+Cosan+que+resiste+ao+cen%C3%A1rio+macro+adverso+tradenews.com.br HTTP/1.1" 200 None
+2026-06-21 11:07:57 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass [PASS3]: Cosan's crown jewel that resists the advers...'
+2026-06-21 11:07:57 | DEBUG    | src.sentiment_analyzer | [PASS3] 'Compass [PASS3]: a joia da coroa da Cosan que'
+  BART:    positive   93%
+  FinBERT: neutral    91%
+  → BART vence (93%) | ✗ divergem
+2026-06-21 11:07:57 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass (PASS3) ganha selo de compra de BTG, Itaú BBA e Citi...'
+2026-06-21 11:07:57 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-06-21 11:07:57 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Compass+%28PASS3%29+ganha+selo+de+compra+de+BTG%2C+Ita%C3%BA+BBA+e+Citi+com+potencial+de+alta+acima+de+50%25.+Compass+%28PASS3%29+ganha+selo+de+compra+de+BTG%2C+Ita%C3%BA+BBA+e+Citi+com+potencial+de+alta+acima+de+50%25+BPMoney HTTP/1.1" 200 None
+2026-06-21 11:07:58 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass (PASS3) receives a purchase seal from BTG, Itaú BBA ...'
+2026-06-21 11:07:59 | DEBUG    | src.sentiment_analyzer | [PASS3] 'Compass (PASS3) ganha selo de compra de BTG, '
+  BART:    positive   98%
+  FinBERT: positive   95%
+  → BART vence (98%) | ✔ concordam
+2026-06-21 11:07:59 | DEBUG    | src.sentiment_analyzer | Traduzindo: 'Compass Gás e Energia (PASS3) pagará em 29 de junho dividend...'
+2026-06-21 11:07:59 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): translate.google.com:443
+2026-06-21 11:07:59 | DEBUG    | urllib3.connectionpool | https://translate.google.com:443 "GET /m?tl=en&sl=pt&q=Compass+G%C3%A1s+e+Energia+%28PASS3%29+pagar%C3%A1+em+29+de+junho+dividendo+aprovado+em+abril.+Compass+G%C3%A1s+e+Energia+%28PASS3%29+pagar%C3%A1+em+29+de+junho+dividendo+aprovado+em+abril+financenews.com.br HTTP/1.1" 200 None
+2026-06-21 11:08:00 | DEBUG    | src.sentiment_analyzer | Traduzido:  'Compass Gás e Energia (PASS3) will pay a dividend approved i...'
+2026-06-21 11:08:00 | DEBUG    | src.sentiment_analyzer | [PASS3] 'Compass Gás e Energia (PASS3) pagará em 29 de'
+  BART:    positive   68%
+  FinBERT: neutral    94%
+  → FinBERT vence (94%) | ✗ divergem
+2026-06-21 11:08:00 | INFO     | src.storage | ✔ 7 artigo(s) salvos em 'data/sentimentos.csv'.
+2026-06-21 11:08:01 | INFO     | src.storage | ✔ Relatório Excel salvo em 'data/relatorio_sentimentos.xlsx'.
+2026-06-21 11:08:01 | DEBUG    | httpcore.connection | close.started
+2026-06-21 11:08:01 | DEBUG    | httpcore.connection | close.complete
+2026-06-21 11:08:01 | DEBUG    | httpcore.connection | close.started
+2026-06-21 11:08:01 | DEBUG    | httpcore.connection | close.complete
