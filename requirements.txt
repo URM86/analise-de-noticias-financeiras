@@ -1,27 +1,35 @@
 # ============================================================
 # DEPENDÊNCIAS DO PROJETO: Market Sentiment Monitor
 # Monitoramento de sentimento de mercado via Google News RSS
+#
+# INSTALAÇÃO:
+#   1. python -m venv .venv
+#   2. .venv\Scripts\activate        (Windows)
+#      source .venv/bin/activate     (Linux/macOS)
+#   3. pip install -r requirements.txt
 # ============================================================
 
 # --- RSS / HTTP ---
-feedparser==6.0.11
-requests==2.31.0
-urllib3==2.1.0
+feedparser==6.0.12
+requests==2.32.3
+urllib3==2.3.0
 
 # --- NLP / Análise de Sentimento ---
-transformers==4.40.0
-torch==2.2.2
-sentencepiece==0.2.0
+# torch instalado sem versão fixada pois o índice PyPI
+# disponibiliza apenas 2.9+ para Python 3.14 no Windows.
+# Para GPU: instale manualmente via https://pytorch.org
+torch
+transformers>=4.40.0
 
 # --- Tradução (PT-BR → EN antes da análise) ---
 deep-translator==1.11.4
 
 # --- Dados / Persistência ---
-pandas==2.2.2
-openpyxl==3.1.2
+pandas>=2.2.0
+openpyxl==3.1.5
 
 # --- Logging / Utilitários ---
-rich==13.7.1
+rich>=13.7.0
 python-dotenv==1.0.1
-schedule==1.2.1
-tqdm==4.66.4
+schedule==1.2.2
+tqdm>=4.66.0
