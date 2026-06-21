@@ -79,7 +79,8 @@ def _get_pipeline_finbert():
             model=MODELO_FINBERT,
             device=-1,
             # retorna scores de todos os labels, não só o top-1
-            return_all_scores=True,
+            # return_all_scores=True,
+            top_k=None
         )
         logger.info("[FinBERT] Modelo carregado.")
     return _pipeline_finbert
@@ -161,6 +162,15 @@ def _inferir_finbert(texto: str) -> tuple[str, float, dict]:
     """
     clf   = _get_pipeline_finbert()
     saida = clf(texto)[0]   # lista de dicts [{label, score}, ...]
+    
+    # top_k=None retorna lista de listas: [[{label, score}, ...]]
+    # fallback: se vier dict ou lista de dict (versões antigas), normaliza
+    if isinstance(saida, dict):
+        saida = [saida]
+    elif isinstance(saida[0], dict):
+        pass  # lista de dicts — ok
+    else:
+        saida = saida[0]  # lista de listas → pega a primeira
 
     # Normaliza labels para o padrão do projeto
     todos = {

@@ -31,6 +31,7 @@ import hashlib
 from datetime import datetime, timezone, timedelta
 from urllib.parse import quote_plus
 from typing import Optional
+import html
 
 import feedparser
 
@@ -82,8 +83,8 @@ def _eh_recente(data_pub: Optional[datetime]) -> bool:
 
 
 def _limpa_html(texto: str) -> str:
-    """Remove tags HTML simples do texto."""
-    return re.sub(r"<[^>]+>", "", texto).strip()
+    limpo = re.sub(r"<[^>]+>", "", texto).strip()
+    return html.unescape(limpo)  # decodifica &nbsp; &amp; etc.
 
 
 def _monta_artigo(ticker: str, entry, fonte: str, termo: str) -> dict:
@@ -99,6 +100,9 @@ def _monta_artigo(ticker: str, entry, fonte: str, termo: str) -> dict:
         fonte_suffix = partes[1].strip()
 
     descricao = _limpa_html(getattr(entry, "summary", "") or "")
+    # Remove sufixo de fonte que o Google News injeta na descrição
+    if "  " in descricao:  # dois espaços após unescape do &nbsp;&nbsp;
+        descricao = descricao.rsplit("  ", 1)[0].strip()
     url       = getattr(entry, "link", "") or ""
     data_pub  = _parse_data(entry)
 
